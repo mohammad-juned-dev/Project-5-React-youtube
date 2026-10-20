@@ -17,12 +17,12 @@ import cameron from "../../assets/cameron.png";
 const Sidebar = ({sidebar}) => {
   const labelClass = sidebar ? "block" : "hidden";
   const itemClass = sidebar
-    ? "flex w-max items-center gap-5"
-    : "flex w-10 items-center justify-center";
+    ? "flex w-max items-center gap-5 transition-all duration-[500ms]"
+    : "flex w-10 items-center justify-center transition-all duration-[500ms]";
 
   return (
     <div
-      className={`${sidebar ? "w-60 px-5" : "w-[72px] px-4"} py-5 overflow-hidden transition-all duration-200 shadow-[10px_0_8px_-4px_rgba(0,0,0,0.1)]`}
+      className={`${sidebar ? "w-60 px-5" : "w-[72px] px-4"} shrink-0 bg-white py-5 overflow-hidden transition-all duration-[500ms] shadow-[10px_0_8px_-4px_rgba(0,0,0,0.1)]`}
     >
       <div className="flex flex-col gap-5 border-b border-1 border-gray-200">
         <div className={itemClass}>
